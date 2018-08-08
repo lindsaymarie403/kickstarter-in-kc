@@ -42,8 +42,8 @@ div.tooltip {
 
 //SVG setup
 var margin = {top: 10, right: 30, bottom: 30, left: 30},
-      width = 300 - margin.left - margin.right,
-      height = 480 - margin.top - margin.bottom;
+      width = 800 - margin.left - margin.right,
+      height = 1000 - margin.top - margin.bottom;
 
 //scales
 var x = d3.scaleLinear()
@@ -71,7 +71,7 @@ var tooltip = d3.select("body")
 var dataFile = "data.csv"
 
 //number of bins for histogram
-var nbins = 15;
+var nbins = 75;
 
 function update(){
   // Get the data
@@ -111,7 +111,7 @@ function update(){
                   name: p.Name,
                   pct: p.PctFunded,
                   luxury: p.Luxury,
-                  radius: 5
+                  radius: 2
                 }
         }))
       .enter()
